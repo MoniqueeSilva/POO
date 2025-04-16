@@ -5,7 +5,6 @@ public class Carro {
     private int ano;
     private int velocidade;
 
-
     //CONSTRUTOR
     public Carro(String fabricante, String modelo, int ano){
         this.fabricante = fabricante;
@@ -14,7 +13,8 @@ public class Carro {
         velocidade = 0; //não precisa, pois ja inicializa com 0
     }
     
-    public int getvelocidade(){
+    //METÓDOS
+    public int getVelocidade(){
         return velocidade;
     }
 
@@ -22,15 +22,20 @@ public class Carro {
         velocidade += 10;
     }
 
-    public void freiar(){
-        velocidade -= -10; 
+    public void frear(){
+        if(velocidade <= 60){
+            velocidade -= 10;
+        }
+        else{
+            velocidade = 0;
+        }
+    }
+
+    public void parar(){
+        velocidade = 0;
     }
 
     public void exibirDados(){
-        System.out.printf("%s %s %d %d", fabricante, modelo, ano, velocidade);
-    }
-
-    public void Parar(){
-        
+        System.out.printf("%s %s %d - Velocidade atual: %d \n", fabricante, modelo, ano, velocidade);
     }
 }
