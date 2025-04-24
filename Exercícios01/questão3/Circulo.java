@@ -10,12 +10,12 @@ public class Circulo{
 
     //método
     public double calcularArea(){
-    return pi * raio * raio;
+        return pi * raio * raio;
     }
 
     //método
     public double calcularPerimetro(){
-    return 2 * pi * raio;
+        return 2 * pi * raio;
     }
 
     //método
