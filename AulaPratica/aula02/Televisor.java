@@ -3,10 +3,10 @@ public class Televisor{
     private int volume;
     boolean ligado;
 
-    public Televisor(int canal, int volume, boolean ligado){
+    public Televisor(int canal, int volume){
         this.canal = canal;
         this.volume = volume;
-        this.ligado = ligado;
+        this.ligado = false;
     }
 
     public void ligar(){

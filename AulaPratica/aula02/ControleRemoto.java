@@ -25,7 +25,7 @@ public class ControleRemoto {
         televisor.trocarCanal(novoCanal);
     }
 
-    public String toString() { //retornar a descrição da TV 
+    public String toString() {
         return televisor.toString();
     }
 }
