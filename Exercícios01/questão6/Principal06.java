@@ -1,4 +1,4 @@
-public class Principal {
+public class Principal06 {
     //criando objeto
     public static void main(String[] args) {
         // Criando dois objetos Calendário

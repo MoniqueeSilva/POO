@@ -1,4 +1,4 @@
-public class Principal {
+public class Principal04 {
     //criando objetos
     public static void main(String[] args){
         FitaVideo fita1 = new FitaVideo("Game of thrones", 7.99);

@@ -1,4 +1,4 @@
-package AulaPratica.vetores;
+package exerciciosVetores;
 
 import java.util.Scanner;
 

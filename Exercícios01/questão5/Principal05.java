@@ -1,7 +1,7 @@
 //scanner para ler dados do teclado
 import java.util.Scanner;
 
-public class Principal{
+public class Principal05{
     //criando objeto
     public static void main(String[] args){
         Scanner teclado = new Scanner(System.in);

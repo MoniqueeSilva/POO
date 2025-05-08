@@ -1,8 +1,8 @@
-package AulaPratica.vetores;
+package exerciciosVetores;
 
 import java.util.Scanner;
 
-public class vetor07 {
+public class vetor06 {
     public static void main(String[] args){
         int vetorA[] = new int[10];
         int vetorB[] = new int[10];
@@ -18,7 +18,7 @@ public class vetor07 {
             vetorB[i] = teclado.nextInt();
         }
         for(int i = 0; i < vetorC.length; i++){
-            vetorC[i] = vetorA[i] - vetorB[i];
+            vetorC[i] = vetorA[i] + vetorB[i];
             System.out.println("Valores do vetor C: " + vetorC[i]);
         }
         teclado.close();

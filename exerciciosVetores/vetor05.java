@@ -1,23 +1,21 @@
-package AulaPratica.vetores;
+package exerciciosVetores;
 
 import java.util.Scanner;
 
-public class vetor12 {
-    public static void main(String[] args){
+public class vetor05 {
+     public static void main(String[] args){
         int vetorA[] = new int[10];
-        int soma = 0;
+        int vetorB[] = new int[10];
         Scanner teclado = new Scanner(System.in);
 
         for(int i = 0; i < vetorA.length; i++){
             System.out.print("Digite um valor: ");
             vetorA[i] = teclado.nextInt();
         }
-        for (int i = 0; i < vetorA.length; i++) {
-            soma += vetorA[i];
+        for(int i = 0; i < vetorB.length; i++){
+            vetorB[i] = vetorA[i] * i;
+            System.out.println("Valores do vetor: " + vetorB[i]);
         }
-
-        System.out.println("Quantidade de elementos pares no vetor: " + soma);
-
         teclado.close();
     }
 }

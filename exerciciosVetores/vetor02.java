@@ -1,4 +1,4 @@
-package AulaPratica.vetores;
+package exerciciosVetores;
 
 import java.util.Scanner;
 //multiplica os elementos de vetorA com os elementos de vetorB

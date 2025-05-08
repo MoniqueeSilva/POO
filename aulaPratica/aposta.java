@@ -1,7 +1,7 @@
-package AulaPratica;
+package aulaPratica;
 import java.util.Scanner;
 
-public class vetor{
+public class aposta{
     public static void main(String[] args){
         int num[] = new int[5];
         Scanner teclado = new Scanner(System.in);

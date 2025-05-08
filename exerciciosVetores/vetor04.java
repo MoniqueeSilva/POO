@@ -1,20 +1,20 @@
-package AulaPratica.vetores;
+package exerciciosVetores;
 
 import java.util.Scanner;
-
-public class vetor05 {
+import java.lang.Math;
+public class vetor04 {
      public static void main(String[] args){
-        int vetorA[] = new int[10];
-        int vetorB[] = new int[10];
+        double vetorA[] = new double[15];
+        double vetorB[] = new double[15];
         Scanner teclado = new Scanner(System.in);
 
         for(int i = 0; i < vetorA.length; i++){
             System.out.print("Digite um valor: ");
-            vetorA[i] = teclado.nextInt();
+            vetorA[i] = teclado.nextDouble();
         }
         for(int i = 0; i < vetorB.length; i++){
-            vetorB[i] = vetorA[i] * i;
-            System.out.println("Valores do vetor: " + vetorB[i]);
+            vetorB[i] = Math.sqrt(vetorA[i]);
+            System.out.printf("Valores do vetor: %.2f \n", vetorB[i]);
         }
         teclado.close();
     }
