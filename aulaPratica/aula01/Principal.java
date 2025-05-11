@@ -1,7 +1,7 @@
 public class Principal {
     public static void main(String[] args){
         Pessoa p = new Pessoa("João", 18); //criando objeto na memoria
-        //p.falar();
+        p.falar();
 
         Carro c = new Carro("Ford", "Ka", 2024);
         c.acelerar();
