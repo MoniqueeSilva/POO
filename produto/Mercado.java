@@ -1,4 +1,4 @@
-package aulaPratica.produto;
+package produto;
 
 public class Mercado {
     private Produto[] produtos;

@@ -1,4 +1,4 @@
-package aulaPratica.produto;
+package produto;
 
 public class PrincipalCompras {
     public static void main(String[] args) {
