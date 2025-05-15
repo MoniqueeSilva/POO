@@ -1,4 +1,4 @@
-package aulaPratica.aposta;
+package aposta;
 
 public class SorteGrande {
      private int[][] apostas;

@@ -18,7 +18,7 @@ public class Mercado {
     }
     public Produto pesquisarProduto(String nome) {
         for (int i = 0; i < quantidade; i++) {
-            if (produtos[i].getNome().equalsIgnoreCase(nome)) { // para não ter erro de digitação
+            if (produtos[i].getNome().equals(nome)) {
                 return produtos[i];
             }
         }
@@ -26,11 +26,11 @@ public class Mercado {
     }
     public boolean excluirProduto(String nome) {
         for (int i = 0; i < quantidade; i++) {
-            if (produtos[i].getNome().equalsIgnoreCase(nome)) { //para não ter erro de digitação
+            if (produtos[i].getNome().equals(nome)) { //equalsIgnorecase
                 for (int j = i; j < quantidade - 1; j++) {
                     produtos[j] = produtos[j + 1];
                 }
-                produtos[quantidade - 1] = null;
+                //produtos[quantidade - 1] = null;
                 quantidade--;
                 return true;
             }

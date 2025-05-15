@@ -1,4 +1,4 @@
-package aulaPratica.aposta;
+package aposta;
 
 import java.util.Scanner;
 
