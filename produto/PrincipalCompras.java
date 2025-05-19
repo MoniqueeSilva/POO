@@ -1,30 +1,62 @@
 package produto;
 
+import java.util.Scanner;
+
 public class PrincipalCompras {
     public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
         Mercado mercado = new Mercado();
 
-        mercado.adicionarProduto(new Produto("Arroz", 5.99));
-        mercado.adicionarProduto(new Produto("Feijão", 8.49));
-        mercado.adicionarProduto(new Produto("Leite", 4.29));
-        mercado.adicionarProduto(new Produto("Café", 17.50));
+        while(true){
+            System.out.println("\n === MENU ===");
+            System.out.println("1- Adicionar produto");
+            System.out.println("2- Pesquisar produto");
+            System.out.println("3- Excluir produto");
+            System.out.println("4- Exibir produtos");
+            System.out.println("0- Sair");
+            System.out.println("Escolha uma opção: ");
 
-        mercado.listarProdutos();
+            int opcao = teclado.nextInt();
 
-        Produto encontrado = mercado.pesquisarProduto("Feijão");
-        if (encontrado != null) {
-            System.out.println("\nProduto encontrado: " + encontrado);
-        } else {
-            System.out.println("\nProduto não encontrado");
+            switch(opcao){
+                case 1:
+                    System.out.println("Nome do produto: ");
+                    String nome = teclado.nextLine();
+                    System.out.println("Valor do produto: R$");
+                    double valor = teclado.nextDouble();
+
+                    Produto novProduto = new Produto(nome, valor);
+                    mercado.adicionarProduto(novProduto);
+                    System.out.println("Produto adicionado!");
+                    break;
+
+                case 2:
+                    System.out.print("Digite o nome do produto a pesquisar: ");
+                    String nomePesquisa = teclado.nextLine();
+                    Produto produtoEncontrado = mercado.pesquisarProduto(nomePesquisa);
+                    if (produtoEncontrado != null) {
+                        System.out.println("\nProduto encontrado:");
+                        System.out.println(produtoEncontrado);
+                    } else {
+                        System.out.println("Produto não encontrado.");
+                    }
+                    break;
+                    
+                case 3:
+                    mercado.listarProdutos();
+                    break;
+                    
+                case 0:
+                    System.out.println("Saindo do sistema...");
+                    teclado.close();
+                    System.exit(0);
+                    break;
+                    
+                default:
+                    System.out.println("Opção inválida. Tente novamente.");
+            }
+
         }
-
-        boolean removido = mercado.excluirProduto("Leite");
-        if (removido) {
-            System.out.println("\nProduto removido com sucesso!\n");
-        } else {
-            System.out.println("\nProduto não encontrado para remoção\n");
-        }
-
-        mercado.listarProdutos();
+            
     }
 }

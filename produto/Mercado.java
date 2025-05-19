@@ -8,13 +8,13 @@ public class Mercado {
         this.produtos = new Produto[20];
         this.quantidade = 0;
     }
-    public boolean adicionarProduto(Produto produto){
+    public void adicionarProduto(Produto NovoProduto){
         if(quantidade < 20){
-            produtos[quantidade] = produto;
+            produtos[quantidade] = NovoProduto;
             quantidade++;
-            return true;
+        }else{
+            System.out.println("Quantidade de produtos preenchida");
         }
-        return false;
     }
     public Produto pesquisarProduto(String nome) {
         for (int i = 0; i < quantidade; i++) {
@@ -37,6 +37,11 @@ public class Mercado {
         }
         return false;
     }
+
+    public int getQuantidadeProduto(){
+        return quantidade;
+    }
+
     public void listarProdutos() {
         System.out.println("Lista de Produtos:");
         for (int i = 0; i < quantidade; i++) {
