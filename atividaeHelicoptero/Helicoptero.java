@@ -3,7 +3,7 @@ package atividaeHelicoptero;
 public class Helicoptero {
     private boolean ligado;
     private int altitude;
-    private final int capacidade;
+    private int capacidade;
     private int pessoas;
     
     public Helicoptero(int capacidade) {

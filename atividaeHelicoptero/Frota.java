@@ -1,7 +1,7 @@
 package atividaeHelicoptero;
 
 public class Frota {
-    private Helicoptero helicopteros[];
+    private Helicoptero[] helicopteros;
     private int indice;
 
     public Frota() {
@@ -10,7 +10,7 @@ public class Frota {
     }
 
     public void addHelicoptero(Helicoptero novoHelicoptero) {
-        if (indice < helicopteros.length) {
+        if (indice < 10) {
             helicopteros[indice] = novoHelicoptero; // Adiciona o novo helicóptero na próxima posição livre
             indice++; // Incrementa o índice para a próxima posição
         } else {
