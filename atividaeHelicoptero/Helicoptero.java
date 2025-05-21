@@ -32,21 +32,21 @@ public class Helicoptero {
     public boolean entrar() {
         if (pessoas < capacidade) {
             pessoas++;
-            return true;
+            return true; //cabe ainda
         }
-        return false;
+        return false; //cheio
     }
     
     public boolean sair() {
         if (pessoas > 0) {
             pessoas--;
-            return true;
+            return true; //alguém saiu
         }
-        return false;
+        return false; //vazio
     }
     
     public boolean ligar() {
-        if (!ligado) {
+        if (!ligado) { //se o helicóptero NÃO está ligado (! = negação)
             ligado = true;
             return true;
         }
@@ -74,7 +74,7 @@ public class Helicoptero {
             ligado = false;
             return true;
         }
-        return false;
+        return false; 
     }
 
     public String toString() {
