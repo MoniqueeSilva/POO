@@ -26,7 +26,7 @@ public class PrincipalCompras {
 
                     System.out.print("Valor do produto: R$ ");
                     double valor = teclado.nextDouble();
-                    teclado.nextLine(); // Limpa o buffer do Enter
+                    teclado.nextLine();
 
                     Produto novoProduto = new Produto(nome, valor);
                     mercado.adicionarProduto(novoProduto);
